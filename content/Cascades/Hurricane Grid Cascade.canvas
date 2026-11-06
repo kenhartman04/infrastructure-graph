@@ -1,0 +1,311 @@
+{
+  "nodes": [
+    {
+      "id": "g0",
+      "type": "group",
+      "label": "TRIGGER",
+      "x": -60,
+      "y": 150,
+      "width": 280,
+      "height": 260,
+      "color": "1"
+    },
+    {
+      "id": "n0",
+      "type": "file",
+      "file": "Threats/Natural/Hurricane.md",
+      "x": -20,
+      "y": 200,
+      "width": 200,
+      "height": 160,
+      "color": "1"
+    },
+    {
+      "id": "g1",
+      "type": "group",
+      "label": "1st Order — Direct Physical Damage",
+      "x": 340,
+      "y": -80,
+      "width": 300,
+      "height": 820,
+      "color": "3"
+    },
+    {
+      "id": "n1",
+      "type": "file",
+      "file": "Grid/Power Plant.md",
+      "x": 370,
+      "y": -30,
+      "width": 240,
+      "height": 60
+    },
+    {
+      "id": "n2",
+      "type": "file",
+      "file": "Grid/Transmission.md",
+      "x": 370,
+      "y": 70,
+      "width": 240,
+      "height": 60
+    },
+    {
+      "id": "n3",
+      "type": "file",
+      "file": "Grid/Feeders.md",
+      "x": 370,
+      "y": 170,
+      "width": 240,
+      "height": 60
+    },
+    {
+      "id": "sep1",
+      "type": "text",
+      "text": "── grid │ base ──",
+      "x": 390,
+      "y": 270,
+      "width": 200,
+      "height": 40,
+      "color": "0"
+    },
+    {
+      "id": "n4",
+      "type": "file",
+      "file": "Base/AirForce/Runway.md",
+      "x": 370,
+      "y": 340,
+      "width": 240,
+      "height": 60
+    },
+    {
+      "id": "n5",
+      "type": "file",
+      "file": "Base/AirForce/Hangars.md",
+      "x": 370,
+      "y": 440,
+      "width": 240,
+      "height": 60
+    },
+    {
+      "id": "n6",
+      "type": "file",
+      "file": "Base/AirForce/Perimeter.md",
+      "x": 370,
+      "y": 540,
+      "width": 240,
+      "height": 60
+    },
+    {
+      "id": "n6b",
+      "type": "file",
+      "file": "Base/AirForce/POL.md",
+      "x": 370,
+      "y": 640,
+      "width": 240,
+      "height": 60
+    },
+    {
+      "id": "g2",
+      "type": "group",
+      "label": "2nd Order — Power Loss Cascade",
+      "x": 760,
+      "y": 0,
+      "width": 300,
+      "height": 600,
+      "color": "5"
+    },
+    {
+      "id": "n7",
+      "type": "file",
+      "file": "Grid/Substation.md",
+      "x": 790,
+      "y": 50,
+      "width": 240,
+      "height": 60
+    },
+    {
+      "id": "n8",
+      "type": "file",
+      "file": "Base/AirForce/Air Force Base.md",
+      "x": 790,
+      "y": 200,
+      "width": 240,
+      "height": 60
+    },
+    {
+      "id": "n9",
+      "type": "file",
+      "file": "Base/AirForce/Backup Generation.md",
+      "x": 790,
+      "y": 350,
+      "width": 240,
+      "height": 60
+    },
+    {
+      "id": "n9b",
+      "type": "text",
+      "text": "**Components without backup go dark:**\nSecFo, Gates (partial), Hangars (partial)",
+      "x": 790,
+      "y": 460,
+      "width": 240,
+      "height": 100,
+      "color": "5"
+    },
+    {
+      "id": "g3",
+      "type": "group",
+      "label": "3rd Order — Mission Sustainability",
+      "x": 1180,
+      "y": 80,
+      "width": 340,
+      "height": 520,
+      "color": "1"
+    },
+    {
+      "id": "n10",
+      "type": "file",
+      "file": "Base/AirForce/POL.md",
+      "x": 1210,
+      "y": 130,
+      "width": 280,
+      "height": 60
+    },
+    {
+      "id": "n11",
+      "type": "text",
+      "text": "⏱ **MISSION CLOCK STARTS**\n\nFuel consumption ~5× normal\n3–7 days without resupply\nResupply chain also degraded\n(roads, ports, pipelines)",
+      "x": 1210,
+      "y": 240,
+      "width": 280,
+      "height": 160,
+      "color": "1"
+    },
+    {
+      "id": "n12",
+      "type": "text",
+      "text": "💀 **MISSION FAILURE**\n\nRunway, Control Tower, Data Center,\nOperations, Intel — ALL DARK\n\nBase cannot generate, command,\nor project airpower",
+      "x": 1210,
+      "y": 440,
+      "width": 280,
+      "height": 140,
+      "color": "1"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "fromNode": "n0",
+      "toNode": "n1",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "1",
+      "label": "#Disrupts"
+    },
+    {
+      "id": "e2",
+      "fromNode": "n0",
+      "toNode": "n2",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "1",
+      "label": "#Interdicts"
+    },
+    {
+      "id": "e3",
+      "fromNode": "n0",
+      "toNode": "n3",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "1",
+      "label": "#Interdicts"
+    },
+    {
+      "id": "e4",
+      "fromNode": "n0",
+      "toNode": "n4",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "1",
+      "label": "#Disrupts"
+    },
+    {
+      "id": "e5",
+      "fromNode": "n0",
+      "toNode": "n5",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "1",
+      "label": "#Disrupts"
+    },
+    {
+      "id": "e6",
+      "fromNode": "n0",
+      "toNode": "n6",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "1",
+      "label": "#Disrupts"
+    },
+    {
+      "id": "e6b",
+      "fromNode": "n0",
+      "toNode": "n6b",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "1",
+      "label": "#Disrupts"
+    },
+    {
+      "id": "e7",
+      "fromNode": "n2",
+      "toNode": "n7",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "5",
+      "label": "loses input"
+    },
+    {
+      "id": "e8",
+      "fromNode": "n3",
+      "toNode": "n8",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "5",
+      "label": "grid power lost"
+    },
+    {
+      "id": "e9",
+      "fromNode": "n8",
+      "toNode": "n9",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "color": "5",
+      "label": "falls to backup"
+    },
+    {
+      "id": "e10",
+      "fromNode": "n9",
+      "toNode": "n10",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "6",
+      "label": "burns fuel"
+    },
+    {
+      "id": "e11",
+      "fromNode": "n10",
+      "toNode": "n11",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "color": "1"
+    },
+    {
+      "id": "e12",
+      "fromNode": "n11",
+      "toNode": "n12",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "color": "1",
+      "label": "fuel exhausted"
+    }
+  ]
+}
